@@ -1,0 +1,52 @@
+.home {
+    color: color($colors, dark);
+    margin-top: 10px;
+    font-size: 17px;
+    overflow: hidden;
+    text-align:justify;
+}
+
+.home p {
+    padding: 5px;
+}
+
+.home h2 {
+    text-align: center;
+}
+
+.toolbar-title {
+    text-align: center;
+}
+
+.cuteHome {
+    color: color($colors, dark);
+    font-size: 20px;
+    overflow: hidden;
+    text-align:center;
+}
+
+.cuteHome h1 {
+    font-size: 35px;
+}
+
+.cuteHome h2 {
+    font-size: 25px;
+}
+
+.cuteHome #cuteImg {
+    width: 100%;
+}
+
+.home pre {
+    font-size: 10px;
+    padding: 10px;
+    padding-left: 0px;
+}
+
+.lists {
+    font-size: 25px;
+}
+
+.listItems {
+    text-align: center;
+}

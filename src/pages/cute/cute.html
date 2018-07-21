@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Fidget Thingy</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="cuteHome">
+  <p>Hmmm, I wonder what this button does....</p>
+  <button round ion-button color="secondary" icon-start (click)="increment()" style="height: 70px;">
+    <ion-icon name='nuclear' is-active="false"></ion-icon>
+    Push Me Baby!!
+  </button>
+  <button round ion-button color="primary" icon-start (click)="decrement()">
+      <ion-icon name='none' is-active="false"></ion-icon>
+      -1 
+    </button>
+  <br />
+  <button round ion-button color="dark" icon-start (click)="reset()">
+      <ion-icon name='backspace' is-active="false"></ion-icon>
+      Reset :(
+  </button>
+  <hr />
+  <h1>{{number}}</h1>
+  <hr />
+  <h2>{{text1}}</h2>
+  <img id="cuteImg" [src]="picsrc" [ngStyle]="{'visibility': vis}">
+</ion-content>

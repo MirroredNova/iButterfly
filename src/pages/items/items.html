@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Food</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addNote()"><ion-icon name="add"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <button ion-button round icon-only style="width: 15%; height: 50px;" (click)="clearAll()"><ion-icon name="warning"></ion-icon></button>
+    <button round ion-button color="dark" (click)="getIdea()" style="width: 80%; font-size: 20px; height: 50px; text-transform: none;" >Pick Random</button>
+  </ion-item>
+
+<!--
+  <ion-item>
+    <ion-input item-start type="text" id="inputBox" placeholder="Add an item" [(ngModel)]="inputData" style="font-size: 20px; height: 50px; "></ion-input>
+    <button item-end ion-button color="primary" (click)="addNote()" style="font-size: 20px; height: 50px; text-transform: none;">Add</button>
+  </ion-item>
+-->
+
+<ion-list reorder="true" (ionItemReorder)="reorderItems($event)">
+ 
+  <ion-item-sliding *ngFor="let note of notes; let i = index;">
+
+    <ion-item class="listItems lists">{{note.title}}</ion-item>
+
+      <ion-item-options>
+        <button ion-button icon-only (click)="editNote(note)" light>
+          <ion-icon name="paper"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="deleteNote(note)" danger>
+          <ion-icon name="trash"></ion-icon>
+        </button>
+
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+
+</ion-content>
